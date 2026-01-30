@@ -1,4 +1,11 @@
+# Etapa 1: Construcción (Maven)
+FROM maven:3.8.5-openjdk-17 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Etapa 2: Ejecución
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-#Hasta que el código Java esté listo, el contenedor solo imprimirá un mensaje
-CMD ["echo", "Esperando código Java... "]
+COPY --from=build /app/target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
