@@ -1,0 +1,41 @@
+services:
+  # Base de Datos
+  db:
+    image: postgres:15-alpine
+    container_name: tienda-db
+    environment:
+      POSTGRES_USER: user_admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: tienda_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  # Backend (Java Spring Boot)
+  backend:
+    build: ./backend
+    container_name: tienda-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/tienda_db
+      SPRING_DATASOURCE_USERNAME: user_admin
+      SPRING_DATASOURCE_PASSWORD: password123
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  # Frontend (Angular)
+  frontend:
+    build: ./frontend
+    container_name: tienda-web
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - backend

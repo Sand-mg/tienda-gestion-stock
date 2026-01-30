@@ -1,0 +1,14 @@
+# IDEs
+.vscode/
+.idea/
+
+# Node / Angular
+**/node_modules/
+**/dist/
+
+# Java / Maven
+**/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Docker
+.docker/
