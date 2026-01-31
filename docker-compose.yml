@@ -34,15 +34,15 @@ services:
       - backend
 
   # Frontend (Angular)
-  frontend:
-    build: ./frontend
-    container_name: tienda-web
-    ports:
-      - "4200:80"
-    depends_on:
-      - backend
-    networks:
-      - backend
+  # frontend:
+  #   build: ./frontend
+  #    container_name: tienda-web
+  #   ports:
+  #     - "4200:80"
+  #   depends_on:
+  #     - backend
+  #   networks:
+  #     - backend
 
 networks:
   backend:
