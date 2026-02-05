@@ -1,2 +1,31 @@
-"# Gesti de Tienda" 
-"Aplicaci Fullstack con Angular, Java (Spring Boot) y Docker." 
+"# Sistema de Gesti贸n de Stock Inteligente" 
+"Aplicaci贸n Fullstack con Angular, Java (Spring Boot) y Docker." 
+## Caracter铆sticas Principales
+- **Frontend Reactivo:** Desarrollado con **Angular 20**, implementando **Signals** para una gesti贸n de estado eficiente y **Zoneless change detection**.
+- **Backend Robusto:** API REST con **Java 17** y **Spring Boot 3**.
+- **Persistencia:** Base de Datos **PostgreSQL 15**.
+- **Infraestructura:** Orquestaci贸n completa con **Docker** y **Docker Compose**.
+- **Proxy de Desarrollo:** Configuraci贸n de bypass para evitar problemas de CORS en local.
+
+## Stack Tecnol贸gico
+- **Frontend:** Angular 20, Bootstrap 5, TypeScript.
+- **Backend:** Spring Boot 3, Spring Data JPA, Hibernate.
+- **DevOps:** Docker, Nginx (para producci贸n).
+
+## Instalaci贸n y Ejecuci贸n
+
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/Sand-mg/tienda-gestion-stock.git](https://github.com/Sand-mg/tienda-gestion-stock.git)
+cd tienda-gestion-stock
+```
+### 2. Levantar la infraestructura (DB y Backend)
+```bash
+docker-compose up -d
+```
+### 3. Arrancar el Frontend (el Docker est谩 comentado para desarrollo)
+```bash
+cd frontend
+npm install
+npm start
+```
