@@ -1,3 +1,3 @@
-INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad) VALUES ('Pan de leña', 'Panadería', 1.20, 20, '2026-02-01');
-INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad) VALUES ('Leche entera', 'Lácteos', 0.95, 12, '2026-02-15');
-INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad) VALUES ('Chorizo casero', 'Embutidos', 4.50, 5, '2026-05-20');
+INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad, fecha_ingreso) VALUES ('Pan de leña', 'Panadería', 1.20, 20,'2026-02-05', '2026-02-01');
+INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad, fecha_ingreso) VALUES ('Leche entera', 'Lácteos', 0.95, 12, '2026-02-15', '2026-01-31');
+INSERT INTO producto (nombre, categoria, precio, stock_actual, fecha_caducidad, fecha_ingreso) VALUES ('Chorizo casero', 'Embutidos', 4.50, 5, '2026-05-20', '2026-04-15');

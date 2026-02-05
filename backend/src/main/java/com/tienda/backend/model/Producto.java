@@ -12,13 +12,17 @@ import org.springframework.cglib.core.Local;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        private Long id;
+        private String nombre;
+        private String categoria;
+        private Double precio;
+    @Column(name = "stock_actual")
+        private Integer stockActual;
 
-    private String nombre;
-    private String categoria;
-    private Double precio;
-    private Integer stockActual;
-    private LocalDate fechaIngreso;
-    private LocalDate fechaCaducidad;
+    @Column(name = "fecha_ingreso")
+        private LocalDate fechaIngreso;
+
+    @Column(name = "fecha_caducidad")
+        private LocalDate fechaCaducidad;
     
 }
