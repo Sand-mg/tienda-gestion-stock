@@ -1,0 +1,86 @@
+$primary-color: #73aafc;
+$danger-bg: #f8d7da;
+$danger-text: #842029;
+$warning-bg: #fff3cd;
+$warning-text: #664d03;
+$success-bg: #d1e7dd;
+$success-text: #0f5132;
+$bg-light: #f8f9fa;
+
+.container {
+  max-width: 1000px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: none;
+
+  .card-header {
+    background: linear-gradient(45deg, $primary-color, #0a58ca);
+    padding: 1.5rem;
+    
+    h5 {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.table {
+  margin-bottom: 0;
+  
+  thead th {
+    background-color: $bg-light;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6c757d;
+    padding: 1.2rem 1rem;
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  tbody td {
+    padding: 1.2rem 1rem;
+    vertical-align: middle;
+    color: #495057;
+  }
+
+  // Anidamiento de hover
+  tbody tr {
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      background-color: rgba($primary-color, 0.03);
+      transform: scale(1.002);
+    }
+  }
+}
+
+.badge-status {
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  display: inline-block; // Asegura que se comporte como una etiqueta
+
+  &.agotado {
+    background-color: $danger-bg;
+    color: $danger-text;
+    border-color: darken($danger-bg, 5%);
+  }
+
+  &.bajo-stock {
+    background-color: $warning-bg;
+    color: $warning-text;
+    border-color: darken($warning-bg, 5%);
+  }
+
+  &.disponible {
+    background-color: $success-bg;
+    color: $success-text;
+    border-color: darken($success-bg, 5%);
+  }
+}
